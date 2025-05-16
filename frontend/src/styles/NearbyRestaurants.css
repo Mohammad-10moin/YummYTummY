@@ -1,0 +1,180 @@
+.nearby-restaurants {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  color: white;
+}
+
+/* Main Container */
+.container {
+  max-width: 900px;
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* backdrop-filter: blur(15px); */
+  padding: 30px;
+  border-radius: 15px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures content is centered */
+}
+
+/* Heading */
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Location Input Fields */
+.location-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.location-inputs input {
+  padding: 12px;
+  width: 240px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1); /* Light frosted effect */
+  color: white;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.location-inputs input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.location-inputs input:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons */
+.search-btn,
+.location-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #ff4f5a, #ff6b81);
+  color: white;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #e83e4b, #ff4f5a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 79, 90, 0.4);
+}
+
+.location-btn {
+  background: linear-gradient(135deg, #007bff, #00a2ff);
+  color: white;
+}
+
+.location-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #007bff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Restaurant List */
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensures cards are centered */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* No Results Message */
+.no-results {
+  font-size: 18px;
+  color: #ff7b54;
+  margin-top: 10px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .location-inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurant-list {
+    flex-direction: column;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+}

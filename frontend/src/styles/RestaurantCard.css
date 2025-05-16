@@ -1,0 +1,135 @@
+/* Glassmorphic Restaurant Card */
+.restaurant-card {
+  background: rgba(255, 255, 255, 0.15); /* Translucent white */
+  backdrop-filter: blur(12px); /* Frosted Glass Effect */
+  -webkit-backdrop-filter: blur(12px); /* For Safari */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle Border */
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 190px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Bookmark Icon */
+.bookmark-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.bookmark-icon:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Restaurant Info */
+.restaurant-info {
+  padding: 16px;
+}
+
+/* Header with Name and Rating */
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Restaurant Name */
+.restaurant-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Rating Badge */
+.rating-badge {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+/* Cuisines and Price */
+.restaurant-cuisines {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.restaurant-spend {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Location */
+.restaurant-location {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  margin-right: 6px;
+}
+
+.details-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #ff4f5a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #e04048;
+}

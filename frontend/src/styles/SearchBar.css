@@ -1,0 +1,93 @@
+/* Search Bar - Glassmorphic Design */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1); /* Light Glassmorphism */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Search Input Container */
+.search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Input Field */
+.search-input input {
+  width: 100%;
+  padding: 12px 14px 12px 45px; /* Space for the icon */
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder Styling */
+.search-input input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus Effect */
+.search-input input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+/* Search Button */
+.search-bar button {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.search-bar button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 18px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input input {
+    padding-left: 40px; /* Adjust icon spacing */
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+}
