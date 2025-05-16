@@ -16,8 +16,8 @@ This project is a full-stack web application that enables users to explore, sear
 zomato-restaurant-search/
 │
 ├── data-loader/          # ETL script to ingest Zomato dataset
-├── backend-api/          # RESTful API built with \[Framework]
-├── frontend/             # Web UI built with React
+├── backend/          # RESTful API built with Express
+├── frontend/             # Web UI built with React and Framer motion
 ├── docs/                 # API docs, architecture diagrams
 └── README.md             # Project overview and setup instructions
 
